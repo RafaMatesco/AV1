@@ -1,0 +1,52 @@
+[
+  {
+    "codigo": "BOE-777",
+    "modelo": "Boeing 777X",
+    "tipo": "COMERCIAL",
+    "capacidade": 350,
+    "alcance": 15000,
+    "pecas": [
+      {
+        "nome": "Turbina Rolls-Royce T-100",
+        "tipo": "IMPORTADA",
+        "prazo": "2026-06-01",
+        "fornecedor": "Rolls-Royce UK",
+        "status": "PRONTA"
+      }
+    ],
+    "etapas": [
+      {
+        "funcionarios": [
+          {
+            "id": "ENG-01",
+            "nome": "João Engenheiro",
+            "telefone": "119999999",
+            "endereco": "Rua A",
+            "usuario": "joao.eng",
+            "senha": "123",
+            "nivelPermissao": "ENGENHEIRO"
+          }
+        ],
+        "nome": "Montagem Estrutural",
+        "status": "CONCLUIDA",
+        "prazo": "2026-06-10"
+      },
+      {
+        "funcionarios": [],
+        "nome": "Pintura Externa",
+        "status": "CONCLUIDA",
+        "prazo": "2026-06-25"
+      }
+    ],
+    "testes": [
+      {
+        "tipo": "ELETRICO",
+        "resultado": "APROVADO"
+      },
+      {
+        "tipo": "AERODINAMICO",
+        "resultado": "APROVADO"
+      }
+    ]
+  }
+]
