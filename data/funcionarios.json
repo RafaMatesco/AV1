@@ -1,20 +1,11 @@
 [
   {
-    "id": "ENG-01",
-    "nome": "João Engenheiro",
-    "telefone": "119999999",
-    "endereco": "Rua A",
-    "usuario": "joao.eng",
-    "senha": "123",
-    "nivelPermissao": "ENGENHEIRO"
-  },
-  {
-    "id": "02",
-    "nome": "Rafael Matesco",
-    "telefone": "5512997554294",
-    "endereco": "Rua Realina de Sao Jose Domingos, 10",
-    "usuario": "rafael",
-    "senha": "123",
+    "id": "1",
+    "nome": "Rafael",
+    "telefone": "12997554294",
+    "endereco": "Rua bla, 10",
+    "usuario": "rafa",
+    "senha": "rafa",
     "nivelPermissao": "ADMINISTRADOR"
   }
 ]

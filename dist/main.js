@@ -286,6 +286,7 @@ function gerenciar_pecas() {
                 // associar a uma aeronave
                 const codigoAeronave = readlineSync.question("Digite o codigo da aeronave (Ex: EBM-001): ");
                 const aeronave = Aeronave_1.default.carregar(codigoAeronave);
+                console.log(aeronave.detalhes());
                 // aqui comeca o cadastro da peca
                 const nome = readlineSync.question("Nome: ");
                 const tipos = ["NACIONAL", "IMPORTADA"];

@@ -1,16 +1,16 @@
 [
   {
-    "codigo": "BOE-777",
-    "modelo": "Boeing 777X",
-    "tipo": "COMERCIAL",
-    "capacidade": 350,
+    "codigo": "emb",
+    "modelo": "Boeing",
+    "tipo": "MILITAR",
+    "capacidade": 300,
     "alcance": 15000,
     "pecas": [
       {
-        "nome": "Turbina Rolls-Royce T-100",
-        "tipo": "IMPORTADA",
+        "nome": "Turbina",
+        "tipo": "NACIONAL",
         "prazo": "2026-06-01",
-        "fornecedor": "Rolls-Royce UK",
+        "fornecedor": "akaer",
         "status": "PRONTA"
       }
     ],
@@ -18,24 +18,34 @@
       {
         "funcionarios": [
           {
-            "id": "ENG-01",
-            "nome": "João Engenheiro",
-            "telefone": "119999999",
-            "endereco": "Rua A",
-            "usuario": "joao.eng",
-            "senha": "123",
-            "nivelPermissao": "ENGENHEIRO"
+            "id": "1",
+            "nome": "Rafael",
+            "telefone": "12997554294",
+            "endereco": "Rua bla, 10",
+            "usuario": "rafa",
+            "senha": "rafa",
+            "nivelPermissao": "ADMINISTRADOR"
           }
         ],
-        "nome": "Montagem Estrutural",
+        "nome": "Montagem",
         "status": "CONCLUIDA",
         "prazo": "2026-06-10"
       },
       {
-        "funcionarios": [],
-        "nome": "Pintura Externa",
+        "funcionarios": [
+          {
+            "id": "1",
+            "nome": "Rafael",
+            "telefone": "12997554294",
+            "endereco": "Rua bla, 10",
+            "usuario": "rafa",
+            "senha": "rafa",
+            "nivelPermissao": "ADMINISTRADOR"
+          }
+        ],
+        "nome": "pintura",
         "status": "CONCLUIDA",
-        "prazo": "2026-06-25"
+        "prazo": ""
       }
     ],
     "testes": [

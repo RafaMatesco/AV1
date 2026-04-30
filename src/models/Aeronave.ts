@@ -98,26 +98,21 @@ Alcance: ${this.alcance}
     Aeronave.salvarLista(lista);
   }
 
-  static carregar(codigo: string) {
+  static carregar(codigo: string): Aeronave {
     const lista = Aeronave.lerLista();
     const data = lista.find((a: any) => a.codigo === codigo);
     if (data) {
-      data.codigo = data.codigo;
-      data.modelo = data.modelo;
-      data.tipo = data.tipo;
-      data.capacidade = data.capacidade;
-      data.alcance = data.alcance;
-
-      data.pecas = data.pecas ? data.pecas.map((p: any) => new Peca(p.nome, p.tipo, p.prazo, p.fornecedor, p.status)) : [];
-      data.etapas = data.etapas ? data.etapas.map((e: any) => {
+      const aeronave = new Aeronave(data.codigo, data.modelo, data.tipo, data.capacidade, data.alcance);
+      aeronave.pecas = data.pecas ? data.pecas.map((p: any) => new Peca(p.nome, p.tipo, p.prazo, p.fornecedor, p.status)) : [];
+      aeronave.etapas = data.etapas ? data.etapas.map((e: any) => {
         const etapa = new Etapa(e.nome, e.status, e.prazo);
         if (e.funcionarios) {
           etapa.funcionarios = e.funcionarios.map((f: any) => new Funcionario(f.id, f.nome, f.telefone, f.endereco, f.usuario, f.senha, f.nivelPermissao));
         }
-        return new Aeronave(data.codigo, data.modelo, data.tipo, data.capacidade, data.alcance);
+        return etapa;
       }) : [];
-      data.testes = data.testes ? data.testes.map((t: any) => new Teste(t.tipo, t.resultado)) : [];
-      return data;
+      aeronave.testes = data.testes ? data.testes.map((t: any) => new Teste(t.tipo, t.resultado)) : [];
+      return aeronave;
     } else {
       throw new Error(`Aeronave com código ${codigo} não encontrada.`);
     }

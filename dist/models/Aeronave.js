@@ -122,21 +122,17 @@ Alcance: ${this.alcance}
         const lista = Aeronave.lerLista();
         const data = lista.find((a) => a.codigo === codigo);
         if (data) {
-            data.codigo = data.codigo;
-            data.modelo = data.modelo;
-            data.tipo = data.tipo;
-            data.capacidade = data.capacidade;
-            data.alcance = data.alcance;
-            data.pecas = data.pecas ? data.pecas.map((p) => new Peca_1.default(p.nome, p.tipo, p.prazo, p.fornecedor, p.status)) : [];
-            data.etapas = data.etapas ? data.etapas.map((e) => {
+            const aeronave = new Aeronave(data.codigo, data.modelo, data.tipo, data.capacidade, data.alcance);
+            aeronave.pecas = data.pecas ? data.pecas.map((p) => new Peca_1.default(p.nome, p.tipo, p.prazo, p.fornecedor, p.status)) : [];
+            aeronave.etapas = data.etapas ? data.etapas.map((e) => {
                 const etapa = new Etapa_1.default(e.nome, e.status, e.prazo);
                 if (e.funcionarios) {
                     etapa.funcionarios = e.funcionarios.map((f) => new Funcionario_1.default(f.id, f.nome, f.telefone, f.endereco, f.usuario, f.senha, f.nivelPermissao));
                 }
-                return new Aeronave(data.codigo, data.modelo, data.tipo, data.capacidade, data.alcance);
+                return etapa;
             }) : [];
-            data.testes = data.testes ? data.testes.map((t) => new Teste_1.default(t.tipo, t.resultado)) : [];
-            return data;
+            aeronave.testes = data.testes ? data.testes.map((t) => new Teste_1.default(t.tipo, t.resultado)) : [];
+            return aeronave;
         }
         else {
             throw new Error(`Aeronave com código ${codigo} não encontrada.`);

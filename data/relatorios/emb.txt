@@ -1,0 +1,25 @@
+Relatório de Entrega da Aeronave emb
+Nome do Cliente: Embraer
+Data de Entrega: 20/08/2026
+
+========================================
+[AERONAVE] Código: emb
+========================================
+Modelo: Boeing
+Tipo: MILITAR
+Capacidade: 300
+Alcance: 15000
+
+--- PEÇAS UTILIZADAS ---
+  - Turbina | Tipo: NACIONAL | Fornecedor: akaer | Status: PRONTA | Prazo: 2026-06-01
+
+--- ETAPAS REALIZADAS ---
+  - [CONCLUIDA] Montagem (Prazo: 2026-06-10) - Funcionários Associados: 1
+      * Rafael (ADMINISTRADOR)
+  - [CONCLUIDA] pintura (Prazo: ) - Funcionários Associados: 1
+      * Rafael (ADMINISTRADOR)
+
+--- RESULTADOS DOS TESTES ---
+  - [APROVADO] Teste ELETRICO
+  - [APROVADO] Teste AERODINAMICO
+========================================
